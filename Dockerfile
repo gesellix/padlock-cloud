@@ -16,7 +16,7 @@ RUN apk add --no-cache build-base git go \
     && mv /go/src/github.com/maklesoft/padlock-cloud/assets /padlock-assets \
     && rm -rf /go \
     && adduser -S padlock \
-    && chown -R padlock /padlock-cloud \
+    && chown -R padlock /padlock-cloud /padlock-db /padlock-log \
     && apk del --no-cache build-base git go
 
 USER padlock
